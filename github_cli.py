@@ -1,5 +1,6 @@
 import argparse
 from github_api import get_github_user_events
+from github_events import EVENT_TYPE_DESCRIPTIONS
 
 def main():
     # set up the command-line argument parser
@@ -18,7 +19,9 @@ def main():
         if events:
             print(f"Recent activity for GitHub user: {args.username}")
             for event in events:
-                print(f"Event: {event['type']}, Date: {event['created_at']}")
+                event_type = event['type']
+                description = EVENT_TYPE_DESCRIPTIONS.get(event_type, event_type)
+                print(f"Event: {description}, Date: {event['created_at']}")
         else:
             print(f"No events found for user {args.username}.")
     else:
