@@ -7,9 +7,7 @@ def get_github_user_events(username):
         conn = http.client.HTTPSConnection("api.github.com")
 
         # user agent header required by GitHub
-        headers = {
-            'User-Agent': 'Python CLI',
-        }
+        headers = {'User-Agent': 'Python CLI'}
 
         #GET request to the user events endpoint
         conn.request("GET", f"/users/{username}/events", headers=headers)
