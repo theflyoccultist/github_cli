@@ -6,7 +6,7 @@ A simple command-line interface (CLI) tool to retrieve and display GitHub user a
 
 - Retrieve recent activity for a specific GitHub user.
 - Display activity with user-friendly descriptions for different event types.
-- Display the date and the repository URL address.
+- Display the date and the repository api address.
 
 ## Prerequisites
 
